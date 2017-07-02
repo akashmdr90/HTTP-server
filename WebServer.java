@@ -1,9 +1,9 @@
 /**
 	   * To implement a simplified Anonymous E-Mail Sender (AMS) Server
-	   *  server gets a “GET / HTTP/1.1” request. 
+	   *  server gets a â€œGET / HTTP/1.1â€ request. 
 	   *  Create a HTTP response message in which you will 
 	   *  send a simple ams.html file to the client.
-	   *  The user clicks Submit. Then your server will get a “POST / HTTP/1.1” 
+	   *  The user clicks Submit. Then your server will get a â€œPOST / HTTP/1.1â€ 
 	   *  request which contains basic e-mail information.
 	   *  send an e-mail using basic SMTP protocol.
 	   **/ 
@@ -158,7 +158,7 @@ public class WebServer {
       msg.setSubject(subject); // Subject line is entered
       msg.setText(message);   // Message body is being entered here
       SMTPTransport t = (SMTPTransport)session.getTransport("smtps");
-      t.connect("smtp.gmail.com", "networkclasstest@gmail.com", "network1234"); // User name and Password of the gmail account from which its sent
+      t.connect("smtp.gmail.com", "network123@gmail.com", "pass"); // User name and Password of the gmail account from which its sent
       t.sendMessage(msg, msg.getAllRecipients());
       System.out.println("SMTP server end ......");
       t.close();
